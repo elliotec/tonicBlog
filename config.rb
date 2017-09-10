@@ -23,6 +23,7 @@ page '/*.txt', layout: false
 activate :blog do |blog|
   # This will add a prefix to all links, template references and source paths
   # blog.prefix = "blog"
+  #
 
   blog.permalink = ':title.html'
   blog.name = 'tonic'
@@ -51,18 +52,11 @@ activate :blog do |blog|
   # blog.page_link = "page/{num}"
 end
 
-# activate :contentful do |f|
-#   f.space         = SPACE
-#   f.access_token  = ACCESS_TOKEN
-#   f.cda_query     = QUERY
-#   f.content_types = CONTENT_TYPES_MAPPINGS
-# end
-
 page "/feed.xml", layout: false
 # Reload the browser automatically whenever files change
-# configure :development do
-#   activate :livereload
-# end
+configure :development do
+  activate :livereload
+end
 
 # Methods defined in the helpers block are available in templates
 # helpers do
