@@ -33,7 +33,7 @@ activate :blog do |blog|
   blog.permalink = ':title.html'
   blog.name = 'tonic'
   blog.sources = 'posts/{year}-{month}-{day}-{title}.html'
-  blog.layout = 'post'
+  blog.layout = 'layout'
   blog.summary_length = '150'
   blog.tag_template = "tag.html"
   blog.calendar_template = "calendar.html"

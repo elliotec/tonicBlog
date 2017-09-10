@@ -1,5 +1,5 @@
 ---
-layout: blog
+layout: layout
 title: new hair loss blog
 published: true
 date: 2017-09-10T21:52:48.143Z
