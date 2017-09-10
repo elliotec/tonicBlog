@@ -27,7 +27,7 @@ activate :blog do |blog|
 
   blog.permalink = ':title.html'
   blog.name = 'tonic'
-  blog.sources = 'posts/{year}-{month}-{day}-{title}.html'
+  blog.sources = 'posts/{year}-{month}-{day}-{title}.md'
   blog.layout = 'post'
   blog.summary_length = '150'
 
