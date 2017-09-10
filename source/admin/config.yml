@@ -3,13 +3,13 @@ backend:
   repo: elliotec/tonicBlog # Path to your Github repository
   branch: master # Branch to update
 media_folder: "images/uploads"
-public_folder: "source" # CMS now knows 'source' is the public folder and will strip this from the path
+# public_folder: "source" # CMS now knows 'source' is the public folder and will strip this from the path
 collections:
   - name: "blog" # Used in routes, e.g., /admin/collections/blog
     label: "tonic" # Used in the UI
-    folder: "source/posts/" # The path to the folder where the documents are stored
+    folder: "source/posts" # The path to the folder where the documents are stored
     create: true # Allow users to create new documents in this collection
-    slug: "{{year}}-{{month}}-{{day}}-{{slug}}.html" # Filename template, e.g., YYYY-MM-DD-title.md
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
     fields: # The fields for each document, usually in front matter
       - {label: "Layout", name: "layout", widget: "hidden", default: "layout"}
       - {label: "Title", name: "title", widget: "string"}
