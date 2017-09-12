@@ -23,7 +23,7 @@ page "/sitemap.xml", layout: false
 ###
 
 activate :directory_indexes
-
+activate :sprockets
 # Sitemap
 set :url_root, 'https://www.amplehair.com'
 activate :search_engine_sitemap
@@ -56,11 +56,10 @@ end
 #   end
 # end
 
-# Build-specific configuration
 configure :build do
-  # Minify CSS on build
-  activate :minify_css
+  activate :minify_css, inline: true
   activate :minify_html
-  # Minify Javascript on build
-  activate :minify_javascript
+  activate :minify_javascript, inline: true
+  activate :imageoptim
+  activate :asset_hash
 end
