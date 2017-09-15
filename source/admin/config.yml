@@ -2,10 +2,10 @@ backend:
   name: github
   repo: elliotec/tonicBlog # Path to your Github repository
   branch: master # Branch to update
-media_folder: "images/uploads"
+media_folder: "source/images"
 collections:
   - name: "blog" # Used in routes, e.g., /admin/collections/blog
-    label: "tonic" # Used in the UI
+    label: "Tonic" # Used in the UI
     folder: "source/posts" # The path to the folder where the documents are stored
     create: true # Allow users to create new documents in this collection
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}.html" # Filename template, e.g., YYYY-MM-DD-title.md
@@ -15,5 +15,5 @@ collections:
       - {label: "Tags", name: "tags", widget: "string"}
       - {label: "Published", name: "published", widget: "boolean", default: "false"}
       - {label: "Publish Date", name: "date", widget: "datetime"}
-      - {label: "Featured Image", name: "thumbnail", widget: "image"}
+      - {label: "Featured Image", name: "image", widget: "image"}
       - {label: "Body", name: "body", widget: "markdown"}

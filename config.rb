@@ -24,6 +24,12 @@ page "/sitemap.xml", layout: false
 
 activate :directory_indexes
 activate :sprockets
+
+set :css_dir, 'stylesheets'
+set :js_dir, 'javascripts'
+set :images_dir, 'images'
+set :build_dir, 'build'
+
 # Sitemap
 set :url_root, 'https://www.amplehair.com'
 activate :search_engine_sitemap
@@ -46,7 +52,7 @@ end
 
 # Reload the browser automatically whenever files change
 configure :development do
-  activate :livereload
+  # activate :livereload
 end
 
 # Methods defined in the helpers block are available in templates
